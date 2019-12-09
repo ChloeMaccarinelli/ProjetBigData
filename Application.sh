@@ -1,0 +1,33 @@
+#!bin/bash
+echo ________________________________
+echo Lancement traitement des donnees 
+echo ________________________________
+cd Donnees
+python filterData.py
+echo ___________________________________________________
+echo fichiers de donnees traitees generes dans ./Donnees 
+echo ____________________________________________________
+cd ..
+echo ___________________________________________________________________
+echo Importation des donnees dans MongoDb , OracleSQL, Cassandra, Hadoop
+echo ___________________________________________________________________
+cd Launcher
+python ImportDataOracleSQL.py
+echo __________________________________
+echo Importation OracleSQL terminee
+echo __________________________________
+python ImportDataMongoDB.py
+echo __________________________________
+echo Importation MongoDB terminee
+#echo __________________________________
+#python ImportDataCassandra.py
+#echo __________________________________
+#echo Importation Cassandra terminee
+#echo __________________________________
+#python ImportDataHadoop.py
+#echo __________________________________
+#echo Importation Hadoop terminee
+#echo __________________________________
+echo __________________________________
+echo Importation des donnees terminees
+echo __________________________________

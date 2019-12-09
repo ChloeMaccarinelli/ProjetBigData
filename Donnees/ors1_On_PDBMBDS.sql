@@ -1,0 +1,1 @@
+create table Clients_12(age integer, sexe varchar2(15), taux varchar2(255), situationFamiliale varchar2(255), nbEnfantsAcharge varchar2(255), deuxiemeVoiture varchar2(15), immatriculation varchar2(255))
